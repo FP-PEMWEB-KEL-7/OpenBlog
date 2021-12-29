@@ -91,5 +91,50 @@ Pada halaman ini user melihat isi artikel yang telah dipilih untuk dibaca. Terda
 Pada halaman ini, user akan mengisi foto artikel, judul artikel, dan isi artikel. Jika telah selesai, menekan tombol submit.
 
 # SOURCE CODE DAN PENJELASAN
+## Folder View
+##### home.php
+File ini berisi kode-kode untuk tampilan pada beranda/halaman utama website.
+##### about.php
+File ini berisi kode-kode untuk tampilan detail terkait web ini dan pembuatnya.
+##### login.php
+File ini berisi kode-kode untuk tampilan login.
+##### signup.php
+File ini berisi kode-kode untuk tampilan signup.
+##### write.php
+File ini berisi kode-kode untuk tampilan menulis isi artikel.
+##### post.php
+File ini berisi kode-kode untuk tampilan isi artikel.
+##### settings.php
+File ini berisi kode-kode untuk merubah detail informasi pada user.
+##### home_logged_in.php
+File ini berisi kode-kode untuk tampilan pada beranda/halaman utama website setelah login.
 
+## Folder Config
+Kode-kode yang berada pada folder “config” berfungsi untuk konfigurasi pada website. Beberapa kode-kode inti/file penting yang terdapat pada folder tersebut, yaitu :
 
+##### autoload.php
+File konfigurasi yang pertama yaitu autoload.php, file ini digunakan untuk mengatur fungsi-fungsi yang akan dimuat otomatis di awal ketika program dijalankan.<br>
+##### config.php
+Pada file ini terdapat beberapa onfigurasi yang secara standar sudah terkonfigurasi.
+##### database.php
+Dilihat dari nama filenya maka anda sudah dapat menangkap apa fungsi dari file ini. File database.php digunakan untuk melakukan konfigurasi yang berkaitan dengan konfigurasi database dari website yang akan dibuat.
+##### routes.php
+Untuk anda yang belum memahami tentang route akan saya gambarkan tentang penggunaan dari route itu sendiri. Route adalah salah satu cara untuk mengatur jalur atau rute yang digunakan untuk mengakses sebuah halaman website. Route ini juga sering digunakan agar tampilan link dari website yang dibuat lebih simpel dan lebih mudah untuk dipahami. Route juga bisa diartikan sebagai versi alias dari jalur utama menuju alamat asli.
+
+## Folder View
+##### home.php
+File ini berisi kode-kode untuk membuat logic pada beranda/halaman utama website.
+##### about.php
+File ini berisi kode-kode untuk membuat logic detail terkait web ini dan pembuatnya.
+##### login.php
+File ini berisi kode-kode untuk membuat logic login.
+##### signup.php
+File ini berisi kode-kode untuk membuat logic signup.
+##### write.php
+File ini berisi kode-kode untuk membuat logic menulis isi artikel.
+##### post.php
+File ini berisi kode-kode untuk membuat logic isi artikel.
+##### settings.php
+File ini berisi kode-kode untuk merubah detail informasi pada user.
+##### home_logged_in.php
+File ini berisi kode-kode untuk membuat logic pada beranda/halaman utama website setelah login.
