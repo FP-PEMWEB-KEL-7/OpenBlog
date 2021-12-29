@@ -5,9 +5,9 @@ class Akun extends CI_Model {
 	public function get($by = null, $value = null, $logged_in = false)
 	{
 		if ($logged_in) {
-			$this->db->select('id, email, name, password');
+			$this->db->select('id, email, name, gambar_link, password');
 		} else {
-			$this->db->select('id, email, name');
+			$this->db->select('id, email, name, gambar_link');
 		}
 
 		$this->db->from('akun');
