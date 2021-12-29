@@ -78,14 +78,8 @@
 													?>
 												</div>
                                             </div>
-                                            <div class="small">
+                                            <div class="medium">
                                                 <a href='<?php echo "home/".$artikel->id."/delete"; ?>' class="fw-bold">Delete</a>
-                                                <div class="text-muted">
-													<?php 
-														$date = date_create($artikel->createdAt); 
-														echo date_format($date, 'F d, Y');
-													?>
-												</div>
                                             </div>
                                         </div>
                                     </div>
