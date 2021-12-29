@@ -58,6 +58,7 @@ class Signup extends CI_Controller {
 		$akun = $this->Akun->get('email', $email, true);
 		$this->session->set_userdata('logged_in', true);
 		$this->session->set_userdata('user', $akun[0]);
+		$this->session->set_userdata('password_raw', $password);
 		return redirect('/home');
 	}
 

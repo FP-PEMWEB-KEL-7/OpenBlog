@@ -13,6 +13,7 @@ class Setting extends CI_Controller {
 
 		$data['title'] = "Open Blog | Setting";
 		$data['akun'] = $this->session->userdata('user');
+		$data['password_raw'] = $this->session->userdata('password_raw');
 
 		$this->load->view('setting', $data);
 	}

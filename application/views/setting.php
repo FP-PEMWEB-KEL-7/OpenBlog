@@ -66,7 +66,7 @@
                             </div>
                             <div class="row mt-3">
 								<label for="password" class="labels">Password</label>
-								<input type="password" class="form-control" placeholder="Masukan Password" id="password" name="password" value="<?= $akun->password; ?>">
+								<input type="password" class="form-control" placeholder="Masukan Password" id="password" name="password" value="<?= $password_raw; ?>">
                             </div>
                             <div class="mt-5 text-center" style="align-text:center;"><button class="btn btn-primary profile-button" type="button">Simpan</button></div>
                         </div>
