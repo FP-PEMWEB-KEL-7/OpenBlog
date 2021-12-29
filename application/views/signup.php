@@ -39,8 +39,8 @@
                         <p className="text">Password</p>
                         <input type="password" class="fill" placeholder="Password" />
                         <div class="bottom">
-                            <button class="button">Sign In</button>
-                            <a href="signup" class="signUpText">
+                            <button class="button" type="submit">Sign Up</button>
+                            <a href="login" class="signUpText">
                                 Saya sudah punya akun
                             </a>   
                             <div>

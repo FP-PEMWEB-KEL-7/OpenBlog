@@ -39,7 +39,7 @@
                         <p className="text">Password</p>
                         <input type="password" class="fill" placeholder="Password" />
                         <div class="bottom">
-                            <button class="button">Sign In</button>
+                            <button class="button" type="submit">Sign In</button>
                             <a href="signup" class="signUpText">
                                 Belum punya akun?
                             </a>   
