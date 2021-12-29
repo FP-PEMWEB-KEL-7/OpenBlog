@@ -6,6 +6,7 @@ class Post extends CI_Controller {
 	public function index($id = null)
 	{
 		$this->load->helper('url');
+		$this->load->model('Artikel');
 
 		$data['artikel'] = $this->Artikel->get_by_id($id);
 
