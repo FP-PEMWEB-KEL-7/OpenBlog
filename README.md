@@ -15,6 +15,8 @@
 Open blog adalah sebuah website artikel blog yang ramah digunakan untuk semua kalangan usia. Dimana di dalam nya dapat menuangkan kata kata yang berasal dari sebuah ide kreatifitas dengan tampilan web yang user friendly dan juga melihat artikel artikel yang menarik untuk dibaca.
 
 # SITEMAP
+![image](https://user-images.githubusercontent.com/95756766/147681350-15870519-685b-40ce-bde1-a7d5daf7fa3d.png)
+
 # PENJELASAN SITEMAP
 
 # TEKNOLOGI YANG DIGUNAKAN
