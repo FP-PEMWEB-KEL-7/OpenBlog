@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-3 border-right">
                         <div class="d-flex flex-column align-items-center text-center p-3">
-							<img class="rounded-circle mt-5" width="150px" src="<?= $akun->gambar_link; ?>">
+							<img class="rounded-circle mt-5" width="150px" height="150px" src="<?= $akun->gambar_link; ?>">
 							<span class="font-weight-bold"><?= $akun->name; ?></span>
 							<span class="text-black-50"><?= $akun->email; ?></span>
 							<span> </span>
