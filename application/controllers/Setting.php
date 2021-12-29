@@ -21,6 +21,7 @@ class Setting extends CI_Controller {
 	public function post()
 	{
 		$this->load->helper('url');
+		$this->session->set_flashdata('error', '');
 
 		if (!$this->session->userdata('logged_in')){
 			return redirect('/');
@@ -44,6 +45,11 @@ class Setting extends CI_Controller {
 			'name' => $name,
 			'password' => $password
 		]);
+
+		if (!$updated) {
+			$this->session->set_flashdata('error', 'Gagal mengubah data');
+			return $this->load->view('setting', $data);
+		}
 
 		$this->load->view('setting', $data);
 	}

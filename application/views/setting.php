@@ -69,6 +69,10 @@
 									<label for="password" class="labels">Password</label>
 									<input type="password" class="form-control" placeholder="Masukan Password" id="password" name="password" value="<?= $password_raw; ?>">
 								</div>
+								<div class="row mt-3">
+									<?= $this->session->flashdata('error'); ?>
+									<?= validation_errors(); ?>
+								</div>
 								<div class="mt-5 text-center" style="align-text:center;"><button class="btn btn-primary profile-button" type="submit">Simpan</button></div>
 							</form>
 						</div>
