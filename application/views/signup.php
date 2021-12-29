@@ -56,7 +56,7 @@
 						<?= validation_errors(); ?>
                     </div>
                   <button type="submit" class="btn btn-primary m-2">Daftar</button>
-                  <a href="login" style="margin-left: 380px;">Saya sudah punya akun</a>
+                  <a href="login" class="ms-auto">Saya sudah punya akun</a>
                 </div>
             </div>
         </form>

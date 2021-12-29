@@ -56,7 +56,7 @@
 						<?= validation_errors(); ?>
                     </div>
                     <button type="submit" class="btn btn-primary m-2">Masuk</button>
-                  	<a href="signup" style="margin-left: 370px;">Belum punya akun?</a>
+                  	<a href="signup" class="ms-auto">Belum punya akun?</a>
                 </div>
             </div>
         </form>
