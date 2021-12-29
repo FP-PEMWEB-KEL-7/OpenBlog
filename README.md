@@ -10,6 +10,7 @@
 5. Dimas Aditya Putra [19081010190]
 
 # SCREENSHOT HALAMAN UTAMA
+![image](https://user-images.githubusercontent.com/95847038/147682805-12affaf6-874a-4bc3-8842-a97e2504ebeb.png)
 
 # DESKRIPSI APLIKASI
 Open blog adalah sebuah website artikel blog yang ramah digunakan untuk semua kalangan usia. Dimana di dalam nya dapat menuangkan kata kata yang berasal dari sebuah ide kreatifitas dengan tampilan web yang user friendly dan juga melihat artikel artikel yang menarik untuk dibaca.
