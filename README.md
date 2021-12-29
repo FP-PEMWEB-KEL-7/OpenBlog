@@ -149,17 +149,15 @@ Berikut adalah struktur aplikasi yang terpenting
 │   ├── models/
 │   │   ├── Akun.php
 │   │   └── Artikel.php
-│   ├── views/
-│   │   ├── about.php
-│   │   ├── home_logged_in.php
-│   │   ├── home.php
-│   │   ├── login.php
-│   │   ├── post.php
-│   │   ├── setting.php
-│   │   ├── signup.php
-│   │   └── write.php
-│   └── css/
-│       └── styles.css
+│   └── views/
+│       ├── about.php
+│       ├── home_logged_in.php
+│       ├── home.php
+│       ├── login.php
+│       ├── post.php
+│       ├── setting.php
+│       ├── signup.php
+│       └── write.php
 └── .htaccess
 ```
 ## Folder View
