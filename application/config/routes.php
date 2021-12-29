@@ -57,6 +57,8 @@ $route['home'] = 'Home/index';
 $route['about'] = 'About/index';
 $route['login']['GET'] = 'Login/index';
 $route['login']['POST'] = 'Login/post';
+$route['signup']['GET'] = 'Signup/index';
+$route['signup']['POST'] = 'Signup/post';
 
 // website.com/api/user/all , Method: GET, Return: JSON
 $route['api/user/all'] = '_API_User/getall'; 

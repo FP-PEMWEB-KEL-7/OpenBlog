@@ -24,7 +24,6 @@ class Akun extends CI_Model {
 			!is_array($data)
 			|| empty($data)
 			|| empty($data['email'])
-			|| empty($data['name'])
 			|| empty($data['password'])
 		) {
 			return false;

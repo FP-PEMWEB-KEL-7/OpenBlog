@@ -26,7 +26,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="about">Tentang kami</a></li>
                             <li class="nav-item"><a class="nav-link" href="login">Masuk</a></li>
-                            <li class="nav-item"><a class="btn btn-primary btn-lg rounded-pill mb-3" href="sign_up.html">Memulai</a></li>
+                            <li class="nav-item"><a class="btn btn-primary btn-lg rounded-pill mb-3" href="signup">Memulai</a></li>
                         </ul>
                     </div>
                 </div>
@@ -35,16 +35,16 @@
         </main>
 
         <div class="text-center" style="margin-top : 70px;">
-            <h1 class="fw-bolder">LOGIN</h1>
-            <p class="lead fw-normal text-muted mb-0">masukan data akun anda</p>
+            <h1 class="fw-bolder">SIGN UP</h1>
+            <p class="lead fw-normal text-muted mb-0">Beberapa langkah lagi untuk memulai menjadi orang sukses</p>
         </div>
         
         <!-- form login -->
-        <form action="<?= base_url('login'); ?>" method="POST" class="container" style="margin-top : 30px;">
+        <form action="<?= base_url('signup'); ?>" method="POST" class="container" style="margin-top : 30px;">
             <div class="row">
                 <div class="col-md-6 offset-md-3 shadow p-3 mb-5 bg-body rounded">
                     <div class="mb-3 m-2">
-                        <label for="password" class="form-label">Email address</label>
+                        <label for="email" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3 m-2">
@@ -55,8 +55,8 @@
 						<?= $this->session->flashdata('error'); ?>
 						<?= validation_errors(); ?>
                     </div>
-                    <button type="submit" class="btn btn-primary m-2">Masuk</button>
-                  	<a href="signup" style="margin-left: 370px;">Belum punya akun?</a>
+                  <button type="submit" class="btn btn-primary m-2">Daftar</button>
+                  <a href="login" style="margin-left: 380px;">Saya sudah punya akun</a>
                 </div>
             </div>
         </form>
