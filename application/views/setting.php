@@ -53,23 +53,25 @@
                     </div>
                     <div class="col-md-8 border-right">
                         <div class="p-3 py-5">
-                            <div class="d-flex justify-content-between align-items-center mb-3">
-                                <h4 class="text-right">Pengaturan Akun</h4>
-                            </div>
-                            <div class="row mt-3">
-								<label for="gambar_link" class="labels">Gambar</label>
-								<input type="text" class="form-control" placeholder="Masukan URL" id="gambar_link" name="gambar_link" value="">
-                            </div>
-							<div class="row mt-3">
-								<label for="name" class="labels">Nama</label>
-								<input type="text" class="form-control" placeholder="Masukan Nama" id="name" name="name" value="<?= $akun->name; ?>">
-                            </div>
-                            <div class="row mt-3">
-								<label for="password" class="labels">Password</label>
-								<input type="password" class="form-control" placeholder="Masukan Password" id="password" name="password" value="<?= $password_raw; ?>">
-                            </div>
-                            <div class="mt-5 text-center" style="align-text:center;"><button class="btn btn-primary profile-button" type="button">Simpan</button></div>
-                        </div>
+							<form action="<?= base_url('setting'); ?>" method="POST" class="container">
+								<div class="d-flex justify-content-between align-items-center mb-3">
+									<h4 class="text-right">Pengaturan Akun</h4>
+								</div>
+								<div class="row mt-3">
+									<label for="gambar_link" class="labels">Gambar</label>
+									<input type="text" class="form-control" placeholder="Masukan URL" id="gambar_link" name="gambar_link" value="">
+								</div>
+								<div class="row mt-3">
+									<label for="name" class="labels">Nama</label>
+									<input type="text" class="form-control" placeholder="Masukan Nama" id="name" name="name" value="<?= $akun->name; ?>">
+								</div>
+								<div class="row mt-3">
+									<label for="password" class="labels">Password</label>
+									<input type="password" class="form-control" placeholder="Masukan Password" id="password" name="password" value="<?= $password_raw; ?>">
+								</div>
+								<div class="mt-5 text-center" style="align-text:center;"><button class="btn btn-primary profile-button" type="submit">Simpan</button></div>
+							</form>
+						</div>
                     </div>
                 </div>
             </div>
