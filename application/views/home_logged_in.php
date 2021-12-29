@@ -30,7 +30,7 @@
                                       </div>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+                                  <li><a class="dropdown-item" href="setting">Settings</a></li>
                                   <hr>
                                   <li><a class="dropdown-item text-danger" href="logout">Log out</a></li>
                                 </ul>
