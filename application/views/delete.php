@@ -50,9 +50,9 @@
             <p class="lead fw-normal text-muted mb-0">artikel yang sudah dihapus tidak bisa dipulihkan kembali</p>
         </div>
         <div class="container my-5">
-			<div class="row my-5">
-				<a href="<?= base_url('proceed_delete/'.$artikel->id); ?>" role="button" class="btn btn-danger btn-sm mx-2">Ya</a>
-				<a href="<?= base_url('/'); ?>" role="button" class="btn btn-primary btn-sm mx-2">Batalkan</a>
+			<div class="d-flex flex-row justify-content-center my-5">
+				<a href="<?= base_url('proceed_delete/'.$artikel->id); ?>" role="button" class="btn btn-danger mx-2">Ya</a>
+				<a href="<?= base_url('/'); ?>" role="button" class="btn btn-primary mx-2">Batalkan</a>
             </div>
 		</div>
         </main>
