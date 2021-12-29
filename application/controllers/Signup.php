@@ -29,7 +29,8 @@ class Signup extends CI_Controller {
 		$data['title'] = 'Open Blog | Signup';
 
 		$this->form_validation->set_rules('email', 'Email Address', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
+		$this->form_validation->set_message('min_length', 'Minimum of %s characters is %s');
 
 		if ($this->form_validation->run() == false) {
 			return $this->load->view('login', $data);

@@ -32,18 +32,21 @@ class Setting extends CI_Controller {
 		$data['password_raw'] = $this->session->userdata('password_raw');
 
 		$this->form_validation->set_rules('name', 'Nama', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
+		$this->form_validation->set_message('min_length', 'Minimum of %s characters is %s');
 
 		if ($this->form_validation->run() == false) {
 			return $this->load->view('setting', $data);
 		}
 
 		$name = $this->input->post('name');
+		$gambar_link = $this->input->post('gambar_link');
 		$password = $this->input->post('password');
 
 		$updated = $this->Akun->update($data['akun']->id, [
 			'name' => $name,
-			'password' => $password
+			'password' => $password,
+			'gambar_link' => $gambar_link
 		]);
 
 		if (!$updated) {

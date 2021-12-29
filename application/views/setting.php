@@ -59,7 +59,7 @@
 								</div>
 								<div class="row mt-3">
 									<label for="gambar_link" class="labels">Gambar</label>
-									<input type="text" class="form-control" placeholder="Masukan URL" id="gambar_link" name="gambar_link" value="">
+									<input type="text" class="form-control" placeholder="Masukan URL" id="gambar_link" name="gambar_link" value="<?= $akun->gambar_link; ?>">
 								</div>
 								<div class="row mt-3">
 									<label for="name" class="labels">Nama</label>
