@@ -233,8 +233,8 @@ body::-webkit-scrollbar {
 }
 
 .home .displayArticle .mainDisplay .cardArticle {
-  max-width: 600px;
-  width: 600px;
+  max-width: 570px;
+  width: 570px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -251,8 +251,8 @@ body::-webkit-scrollbar {
 
 .home .displayArticle .mainDisplay .cardArticle .left {
   margin-right: 20px;
-  max-width: 430px;
-  width: 430px;
+  max-width: 400px;
+  width: 400px;
 }
 
 .home .displayArticle .mainDisplay .cardArticle .left .top {

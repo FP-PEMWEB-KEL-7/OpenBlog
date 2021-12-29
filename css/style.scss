@@ -191,8 +191,8 @@ body::-webkit-scrollbar {
       justify-content: space-between;
 
       .cardArticle{
-        max-width: 600px;
-        width: 600px;
+        max-width: 570px;
+        width: 570px;
         display: flex;
         align-items: center;
         border-bottom: 1px solid $gray-color-light;
@@ -202,8 +202,8 @@ body::-webkit-scrollbar {
 
         .left {
           margin-right: 20px;
-          max-width: 430px;
-          width: 430px;
+          max-width: 400px;
+          width: 400px;
 
           .top {
             display: flex;
