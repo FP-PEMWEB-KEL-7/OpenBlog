@@ -18,10 +18,10 @@
                         <img src="<?php echo base_url(); ?>assets/open-blog-logo.png" alt="Logo" class="image" />
                     </a>
                     <div class="right">
-                        <a href="" class="signInText">
+                        <a href="login" class="signInText">
                             Sign In
                         </a>
-                        <a href="" class="signUpText">
+                        <a href="signup" class="signUpText">
                             Get Started
                         </a>
                     </div>
@@ -32,7 +32,7 @@
                     <div class="main">
                         <p class='title'>Open Blog is a place for expression through words</p>
                         <p class="lead">It's easy and free to be creative and share your writing</p>
-                        <a href='' class="writeButton">
+                        <a href='login' class="writeButton">
                             Start Writing
                         </a>
                     </div>
