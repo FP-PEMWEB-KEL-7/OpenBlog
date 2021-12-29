@@ -59,8 +59,8 @@
 							<?= validation_errors(); ?>
 						</div>
                     </div>
-					<div class="d-flex flex-row flex-nowrap mb-3 m-2">
-						<button type="submit" class="btn btn-primary m-2">Masuk</button>
+					<div class="d-flex flex-row flex-nowrap align-items-center mb-3 m-2">
+						<button type="submit" class="btn btn-primary">Masuk</button>
 						<a href="signup" class="ms-auto">Belum punya akun?</a>
 					</div>
                 </div>

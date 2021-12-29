@@ -59,8 +59,8 @@
 							<?= validation_errors(); ?>
 						</div>
                     </div>
-					<div class="d-flex flex-row flex-nowrap mb-3 m-2">
-                  		<button type="submit" class="btn btn-primary m-2">Daftar</button>
+					<div class="d-flex flex-row flex-nowrap align-items-center mb-3 m-2">
+                  		<button type="submit" class="btn btn-primary">Daftar</button>
                   		<a href="login" class="ms-auto">Saya sudah punya akun</a>
 					</div>
                 </div>
