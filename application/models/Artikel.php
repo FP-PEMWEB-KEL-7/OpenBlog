@@ -19,7 +19,7 @@ class Artikel extends CI_Model {
 
 	public function get_by_id($id = null, $sortby = null, $sort = null)
 	{
-		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email');
+		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email, artikel.gambar_link as poster, akun.gambar_link as author_photo');
 		$this->db->join('akun', 'akun.id = artikel.author');
 		$this->db->from('artikel');
 
@@ -34,7 +34,7 @@ class Artikel extends CI_Model {
 
 	public function get_all($sortby = null, $sort = null)
 	{
-		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email');
+		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email, artikel.gambar_link as poster, akun.gambar_link as author_photo');
 		$this->db->join('akun', 'akun.id = artikel.author');
 		$this->db->from('artikel');
 
@@ -48,7 +48,7 @@ class Artikel extends CI_Model {
 
 	public function get_limit($limit = null, $sortby = null, $sort = null)
 	{
-		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email');
+		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email, artikel.gambar_link as poster, akun.gambar_link as author_photo');
 		$this->db->join('akun', 'akun.id = artikel.author');
 		$this->db->from('artikel');
 
@@ -78,6 +78,11 @@ class Artikel extends CI_Model {
 			'content' => $data['content'],
 			'author' => $data['author']
 		);
+
+		if(empty($data['gambar_link'])) {
+			$data['gambar_link'] = "https://dummyimage.com/900x400/ced4da/6c757d.jpg";
+		}
+
 		return $this->db->insert('artikel', $data);
 	}
 
@@ -108,6 +113,11 @@ class Artikel extends CI_Model {
 			'title' => empty($data['title']) ? $artikel[0]->title : $data['title'],
 			'content' => empty($data['content']) ? $artikel[0]->content : $data['content']
 		);
+
+		if(empty($data['gambar_link'])) {
+			$data['gambar_link'] = "https://dummyimage.com/900x400/ced4da/6c757d.jpg";
+		}
+		
 		$this->db->where('id', $id);
 		return $this->db->update('artikel', $data);
 	}

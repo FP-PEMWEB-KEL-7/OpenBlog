@@ -29,6 +29,14 @@ class Akun extends CI_Model {
 			return false;
 		}
 
+		if (empty($data['gambar_link'])) {
+			$data['gambar_link'] = 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg';
+		}
+
+		if (empty($data['name'])) {
+			$data['name'] = substr(md5(rand()), 0, 10);
+		}
+
 		$data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
 		return $this->db->insert('akun', $data);
 	}
@@ -42,6 +50,14 @@ class Akun extends CI_Model {
 			|| empty($data['password'])
 		) {
 			return false;
+		}
+
+		if (empty($data['gambar_link'])) {
+			$data['gambar_link'] = 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg';
+		}
+
+		if (empty($data['name'])) {
+			$data['name'] = substr(md5(rand()), 0, 10);
 		}
 
 		$data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);

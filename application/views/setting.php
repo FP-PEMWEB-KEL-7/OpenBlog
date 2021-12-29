@@ -27,7 +27,7 @@
 								<div class="dropdown">
 									<button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 										<div class="">
-											<img class="rounded-circle" width="30px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+											<img class="rounded-circle" width="30px" src="<?= $akun->gambar_link ? $akun->gambar_link : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; ?>">
 										</div>
 									</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -45,7 +45,7 @@
                 <div class="row">
                     <div class="col-md-3 border-right">
                         <div class="d-flex flex-column align-items-center text-center p-3">
-							<img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+							<img class="rounded-circle mt-5" width="150px" src="<?= $akun->gambar_link; ?>">
 							<span class="font-weight-bold"><?= $akun->name; ?></span>
 							<span class="text-black-50"><?= $akun->email; ?></span>
 							<span> </span>
