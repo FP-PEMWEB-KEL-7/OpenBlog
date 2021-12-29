@@ -5,11 +5,12 @@ class Login extends CI_Controller {
 
 	public function index()
 	{
+		$this->load->helper('url');
+		
 		if ($this->session->userdata('logged_in')){
 			return redirect('/');
 		}
 		
-		$this->load->helper('url');
 		$data['title'] = 'Open Blog | Login';
 
 		$this->load->view('login', $data);
@@ -17,11 +18,12 @@ class Login extends CI_Controller {
 
 	public function post()
 	{
+		$this->load->helper('url');
+
 		if ($this->session->userdata('logged_in')){
 			return redirect('/');
 		}
 
-		$this->load->helper('url');
 		$this->load->model('Akun');
 		$data['title'] = 'Open Blog | Login';
 
