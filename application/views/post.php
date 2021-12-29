@@ -18,13 +18,13 @@
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffffff;">
                 <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><img src="<?php echo base_url(); ?>assets/medium-logo.png" style="width : 150px"; alt=""></a>
+                    <a class="navbar-brand" href="<?= base_url('index'); ?>"><img src="<?php echo base_url(); ?>assets/medium-logo.png" style="width : 150px"; alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="about">Tentang kami</a></li>
-                            <li class="nav-item"><a class="nav-link" href="login">Masuk</a></li>
-                            <li class="nav-item"><a class="btn btn-primary btn-lg rounded-pill mb-3" href="signup">Get Started</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('about'); ?>">Tentang kami</a></li>
+                            <li class="nav-item"><a class="nav-link" href="<?= base_url('login'); ?>">Masuk</a></li>
+                            <li class="nav-item"><a class="btn btn-primary btn-lg rounded-pill mb-3" href="<?= base_url('signup'); ?>">Get Started</a></li>
                         </ul>
                     </div>
                 </div>
