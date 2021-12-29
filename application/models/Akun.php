@@ -32,4 +32,20 @@ class Akun extends CI_Model {
 		$data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
 		return $this->db->insert('akun', $data);
 	}
+
+	public function update($id, $data)
+	{
+		if (
+			!is_array($data)
+			|| empty($data)
+			|| empty($data['name'])
+			|| empty($data['password'])
+		) {
+			return false;
+		}
+
+		$data['password'] = password_hash($data['password'], PASSWORD_BCRYPT);
+		$this->db->where('id', $id);
+		return $this->db->update('akun', $data);
+	}
 }
