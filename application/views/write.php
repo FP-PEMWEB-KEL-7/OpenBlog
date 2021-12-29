@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
@@ -27,7 +27,7 @@
 								<div class="dropdown">
 									<button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 										<div class="">
-											<img class="rounded-circle" width="30px" src="<?= $akun->gambar_link ? $akun->gambar_link : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; ?>">
+											<img class="rounded-circle" width="30px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
 										</div>
 									</button>
 									<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -41,45 +41,39 @@
                     </div>
                 </div>
             </nav>
-            <div class="container rounded bg-white mt-10 mb-5">
-                <div class="row">
-                    <div class="col-md-3 border-right">
-                        <div class="d-flex flex-column align-items-center text-center p-3">
-							<img class="rounded-circle mt-5" width="150px" height="180px" src="<?= $akun->gambar_link ? $akun->gambar_link : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; ?>">
-							<span class="font-weight-bold"><?= $akun->name; ?></span>
-							<span class="text-black-50"><?= $akun->email; ?></span>
-							<span> </span>
-						</div>
-                    </div>
-                    <div class="col-md-8 border-right">
-                        <div class="p-3 py-5">
-							<form action="<?= base_url('setting'); ?>" method="POST" class="container">
-								<div class="d-flex justify-content-between align-items-center mb-3">
-									<h4 class="text-right">Pengaturan Akun</h4>
-								</div>
-								<div class="row mt-3">
-									<label for="gambar_link" class="labels">Gambar</label>
-									<input type="text" class="form-control" placeholder="Masukan URL" id="gambar_link" name="gambar_link" value="<?= $akun->gambar_link; ?>">
-								</div>
-								<div class="row mt-3">
-									<label for="name" class="labels">Nama</label>
-									<input type="text" class="form-control" placeholder="Masukan Nama" id="name" name="name" value="<?= $akun->name; ?>">
-								</div>
-								<div class="row mt-3">
-									<label for="password" class="labels">Password</label>
-									<input type="password" class="form-control" placeholder="Masukan Password" id="password" name="password" value="<?= $password_raw; ?>">
-								</div>
-								<div class="row mt-3">
-									<?= $this->session->flashdata('error'); ?>
-									<?= validation_errors(); ?>
-								</div>
-								<div class="mt-5 text-center" style="align-text:center;"><button class="btn btn-primary profile-button" type="submit">Simpan</button></div>
-							</form>
-						</div>
-                    </div>
-                </div>
-            </div>
+            
+            
 
+        <!-- WRITE -->
+        <div class="text-center" style="margin-top : 70px;">
+            <h1 class="fw-bolder">Tuliskan Artikel Anda</h1>
+            <p class="lead fw-normal text-muted mb-0">tulis sesuai dengan kreatifitas anda</p>
+        </div>
+        <form action="<?= base_url('write'); ?>" method="POST" class="container" style="margin-top : 30px;">
+            <div class="mb-3">
+			    <label for="gambar_link" class="labels"><h3>Gambar</h3></label>
+			    <input type="text" class="form-control" placeholder="Masukan URL" id="gambar_link" name="gambar_link" value="">
+			</div>
+            <div class="mb-3">
+                <label for="title" class="form-label"><h3>Judul</h3></label>
+                <input type="title" name="title" id="title" class="form-control" placeholder="Judul" aria-describedby="passwordHelpBlock">
+            </div>
+            <center>
+            <hr style="width: 700px;">
+            </center>
+            <div class="mb-3">
+                <label for="cerita" class="form-label"><h3>Tuliskan Cerita Anda</h3></label>
+                <textarea class="form-control" name="cerita" id="cerita" rows="3"></textarea>
+            </div>
+            <div class="row mt-3">
+				<?= $this->session->flashdata('error'); ?>
+				<?= validation_errors(); ?>
+			</div>
+			<div class="mt-5 text-center" style="align-text:center;"><button class="btn btn-primary profile-button" type="submit">Simpan</button>
+            </div>
+            <br>
+            <br>
+        </form>
         </main>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
