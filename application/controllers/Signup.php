@@ -55,7 +55,10 @@ class Signup extends CI_Controller {
 			return $this->load->view('signup', $data);
 		}
 		
-		return redirect('/login');
+		$akun = $this->Akun->get('email', $email, true);
+		$this->session->set_userdata('logged_in', true);
+		$this->session->set_userdata('user', $akun[0]);
+		return redirect('/home');
 	}
 
 }

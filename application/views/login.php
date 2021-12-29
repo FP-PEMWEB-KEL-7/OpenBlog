@@ -36,7 +36,7 @@
 
         <div class="text-center" style="margin-top : 70px;">
             <h1 class="fw-bolder">LOGIN</h1>
-            <p class="lead fw-normal text-muted mb-0">masukan data akun anda</p>
+            <p class="lead fw-normal text-muted mb-0">Kembalilah menulis agar produktif</p>
         </div>
         
         <!-- form login -->
