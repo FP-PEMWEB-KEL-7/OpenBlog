@@ -31,7 +31,7 @@ class Home extends CI_Controller {
 		$data['title'] = 'Open Blog | Home';
 		$akun = $this->session->userdata('user');
 
-		$data['artikels'] = $this->Artikel->get_by_author($akun->name);
+		$data['artikels'] = $this->Artikel->get_by_author($akun->id);
 		
 		for ($i=0; $i < count($data['artikels']); $i++) { 
 			$data['artikels'][$i]->content = substr($data['artikels'][$i]->content, 0, 200);
