@@ -31,8 +31,8 @@
 
             <div class="main">
                 <div class="container">
-                    <p class="title">Login</p>
-                    <p class="lead">Kembalilah menulis agar produktif</p>
+                    <p class="title">Sign Up</p>
+                    <p class="lead">Beberapa langkah lagi untuk memulai menjadi orang sukses</p>
                     <form class="form" action="<?= base_url('signup'); ?>" method="POST">
                         <p className="text">Email address</p>
                         <input type="email" id="email" name="email" class="fill" placeholder="email" />
