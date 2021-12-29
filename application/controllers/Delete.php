@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Edit extends CI_Controller {
+class Delete extends CI_Controller {
 
 	public function index($id = null)
 	{
