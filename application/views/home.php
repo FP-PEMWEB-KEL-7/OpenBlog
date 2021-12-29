@@ -66,7 +66,7 @@
                                         </p>
                                     </div>
                                     <div class="main">
-                                        <p class="title"><?= $artikel->title; ?></p>
+                                        <a href="<?php echo "post.php?id=".$artikel->id; ?>" class="title"><?= $artikel->title; ?></a>
                                         <p class="description">
                                             <?= $artikel->content; ?>
                                         </p>
