@@ -55,6 +55,7 @@ class Setting extends CI_Controller {
 		}
 
 		$data['akun'] = $this->Akun->get('id', $data['akun']->id, true)[0];
+		$data['password_raw'] = $password;
 		$this->session->set_userdata('user', $data['akun']);
 		$this->session->set_userdata('password_raw', $password);
 		$this->load->view('setting', $data);
