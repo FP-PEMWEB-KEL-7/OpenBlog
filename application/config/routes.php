@@ -67,3 +67,5 @@ $route['write']['POST'] = 'Write/post';
 $route['post/(:num)']['GET'] = 'Post/index/$1';
 $route['edit/(:num)']['GET'] = 'Edit/index/$1';
 $route['edit/(:num)']['POST'] = 'Edit/post/$1';
+$route['confirm_delete/(:num)']['GET'] = 'Delete/index/$1';
+$route['proceed_delete/(:num)']['GET'] = 'Delete/proceed/$1';
