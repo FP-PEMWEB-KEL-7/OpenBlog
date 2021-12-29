@@ -83,6 +83,8 @@ class Edit extends CI_Controller {
 			return $this->load->view('edit', $data);
 		}
 
+		$data['artikel'] = $this->Artikel->get_by_id($id);
+		$data['artikel'] = $data['artikel'][0];
         $this->session->set_flashdata('message', 'Berhasil mengubah artikel');
 		$this->load->view('edit', $data);
 	}
