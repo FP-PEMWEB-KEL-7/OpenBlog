@@ -19,6 +19,7 @@ class Signup extends CI_Controller {
 	public function post()
 	{
 		$this->load->helper('url');
+		$this->session->set_flashdata('error', '');
 
 		if ($this->session->userdata('logged_in')){
 			return redirect('/');
