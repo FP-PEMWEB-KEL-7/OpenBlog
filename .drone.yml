@@ -28,6 +28,8 @@ trigger:
   event:
     include:
     - push
+  branch:
+  - master
 
 volumes:
 - name: pemweb

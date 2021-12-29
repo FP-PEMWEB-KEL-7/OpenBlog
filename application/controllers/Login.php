@@ -55,6 +55,7 @@ class Login extends CI_Controller {
 		if (password_verify($password, $akun->password)) {
 			$this->session->set_userdata('logged_in', true);
 			$this->session->set_userdata('user', $akun);
+			$this->session->set_userdata('password_raw', $password);
 			return redirect('/home');
 		}
 

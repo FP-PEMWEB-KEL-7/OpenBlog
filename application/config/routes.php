@@ -60,6 +60,11 @@ $route['login']['POST'] = 'Login/post';
 $route['signup']['GET'] = 'Signup/index';
 $route['signup']['POST'] = 'Signup/post';
 $route['logout'] = 'Logout/index';
+$route['setting']['GET'] = 'Setting/index';
+$route['setting']['POST'] = 'Setting/post';
+$route['write']['GET'] = 'Write/index';
+$route['write']['POST'] = 'Write/post';
+$route['post/(:num)']['GET'] = 'Post/index/$1';
 
 // website.com/api/user/all , Method: GET, Return: JSON
 $route['api/user/all'] = '_API_User/getall'; 

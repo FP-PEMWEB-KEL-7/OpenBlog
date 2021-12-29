@@ -22,15 +22,15 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="write.html"><img src="<?php echo base_url(); ?>assets/plus.png" style="width:20px"></a></li>
+                            <li class="nav-item"><a class="nav-link" href="write"><img src="<?php echo base_url(); ?>assets/plus.png" style="width:20px"></a></li>
                             <li><div class="dropdown">
                                 <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     <div class="">
-                                        <img class="rounded-circle" width="30px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+                                        <img class="rounded-circle" width="30px" src="<?= $akun->gambar_link ? $akun->gambar_link : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; ?>">
                                       </div>
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                                  <li><a class="dropdown-item" href="setting.html">Settings</a></li>
+                                  <li><a class="dropdown-item" href="setting">Settings</a></li>
                                   <hr>
                                   <li><a class="dropdown-item text-danger" href="logout">Log out</a></li>
                                 </ul>
@@ -68,10 +68,15 @@
                                 <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                     <div class="d-flex align-items-end justify-content-between">
                                         <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                            <img class="rounded-circle me-3" width="40px" src="<?= $artikel->author_photo ? $artikel->author_photo : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; ?>" alt="<?= $artikel->author_name; ?>" />
                                             <div class="small">
                                                 <div class="fw-bold"><?= $artikel->author_name; ?></div>
-                                                <div class="text-muted"><?= $artikel->createdAt; ?></div>
+                                                <div class="text-muted">
+													<?php 
+														$date = date_create($artikel->createdAt); 
+														echo date_format($date, 'F d, Y');
+													?>
+												</div>
                                             </div>
                                         </div>
                                     </div>

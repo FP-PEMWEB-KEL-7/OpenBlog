@@ -13,10 +13,10 @@ class Home extends CI_Controller {
 
 		$this->load->model('Artikel');
 		$data['title'] = 'Open Blog | Home';
-		$data['artikels'] = $this->Artikel->get_limit(3);
+		$data['artikels'] = $this->Artikel->get_limit(20, 'createdAt', 'desc');
 		
 		for ($i=0; $i < count($data['artikels']); $i++) { 
-			$data['artikels'][$i]->content = substr($data['artikels'][$i]->content, 0, 200);
+			$data['artikels'][$i]->content = substr($data['artikels'][$i]->content, 0, 130);
 			$data['artikels'][$i]->title = substr($data['artikels'][$i]->title, 0, 30);
 			$data['artikels'][$i]->author_name = substr($data['artikels'][$i]->author_name, 0, 30);
 		}
@@ -31,10 +31,11 @@ class Home extends CI_Controller {
 		$data['title'] = 'Open Blog | Home';
 		$akun = $this->session->userdata('user');
 
-		$data['artikels'] = $this->Artikel->get_by_author($akun->id);
-		
+		$data['artikels'] = $this->Artikel->get_by_author($akun->id, 'createdAt', 'desc');
+		$data['akun'] = $this->session->userdata('user');
+
 		for ($i=0; $i < count($data['artikels']); $i++) { 
-			$data['artikels'][$i]->content = substr($data['artikels'][$i]->content, 0, 200);
+			$data['artikels'][$i]->content = substr($data['artikels'][$i]->content, 0, 130);
 			$data['artikels'][$i]->title = substr($data['artikels'][$i]->title, 0, 30);
 			$data['artikels'][$i]->author_name = substr($data['artikels'][$i]->author_name, 0, 30);
 		}

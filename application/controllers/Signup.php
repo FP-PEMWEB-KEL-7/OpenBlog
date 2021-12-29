@@ -29,7 +29,8 @@ class Signup extends CI_Controller {
 		$data['title'] = 'Open Blog | Signup';
 
 		$this->form_validation->set_rules('email', 'Email Address', 'required');
-		$this->form_validation->set_rules('password', 'Password', 'required');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
+		$this->form_validation->set_message('min_length', 'Minimum of %s characters is %s');
 
 		if ($this->form_validation->run() == false) {
 			return $this->load->view('login', $data);
@@ -58,6 +59,7 @@ class Signup extends CI_Controller {
 		$akun = $this->Akun->get('email', $email, true);
 		$this->session->set_userdata('logged_in', true);
 		$this->session->set_userdata('user', $akun[0]);
+		$this->session->set_userdata('password_raw', $password);
 		return redirect('/home');
 	}
 
