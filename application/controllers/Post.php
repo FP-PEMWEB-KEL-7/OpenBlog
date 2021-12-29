@@ -16,7 +16,7 @@ class Post extends CI_Controller {
 
 		$data['artikel'] = $data['artikel'][0];
 
-		$data['title'] = 'Open Blog | '+$data['artikel']->title;
+		$data['title'] = 'Open Blog | ' . $data['artikel']->title;
 
 		$this->load->view('post', $data);
 	}
