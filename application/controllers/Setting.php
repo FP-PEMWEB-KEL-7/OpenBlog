@@ -51,8 +51,8 @@ class Setting extends CI_Controller {
 			return $this->load->view('setting', $data);
 		}
 
-		$akun = $this->Akun->get('id', $data['akun']->id, true);
-		$this->session->set_userdata('user', $akun[0]);
+		$data['akun'] = $this->Akun->get('id', $data['akun']->id, true)[0];
+		$this->session->set_userdata('user', $data['akun']);
 		$this->load->view('setting', $data);
 	}
 
