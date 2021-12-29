@@ -121,3 +121,20 @@ Dilihat dari nama filenya maka anda sudah dapat menangkap apa fungsi dari file i
 ##### routes.php
 Untuk anda yang belum memahami tentang route akan saya gambarkan tentang penggunaan dari route itu sendiri. Route adalah salah satu cara untuk mengatur jalur atau rute yang digunakan untuk mengakses sebuah halaman website. Route ini juga sering digunakan agar tampilan link dari website yang dibuat lebih simpel dan lebih mudah untuk dipahami. Route juga bisa diartikan sebagai versi alias dari jalur utama menuju alamat asli.
 
+## Folder View
+##### home.php
+File ini berisi kode-kode untuk membuat logic pada beranda/halaman utama website.
+##### about.php
+File ini berisi kode-kode untuk membuat logic detail terkait web ini dan pembuatnya.
+##### login.php
+File ini berisi kode-kode untuk membuat logic login.
+##### signup.php
+File ini berisi kode-kode untuk membuat logic signup.
+##### write.php
+File ini berisi kode-kode untuk membuat logic menulis isi artikel.
+##### post.php
+File ini berisi kode-kode untuk membuat logic isi artikel.
+##### settings.php
+File ini berisi kode-kode untuk merubah detail informasi pada user.
+##### home_logged_in.php
+File ini berisi kode-kode untuk membuat logic pada beranda/halaman utama website setelah login.
