@@ -73,12 +73,6 @@ class Artikel extends CI_Model {
 			return false;
 		}
 
-		$data = array(
-			'title' => $data['title'],
-			'content' => $data['content'],
-			'author' => $data['author']
-		);
-
 		if(empty($data['gambar_link'])) {
 			$data['gambar_link'] = "https://dummyimage.com/900x400/ced4da/6c757d.jpg";
 		}
@@ -109,10 +103,8 @@ class Artikel extends CI_Model {
 			return false;
 		}
 
-		$data = array(
-			'title' => empty($data['title']) ? $artikel[0]->title : $data['title'],
-			'content' => empty($data['content']) ? $artikel[0]->content : $data['content']
-		);
+		$data['title'] = empty($data['title']) ? $artikel[0]->title : $data['title'];
+		$data['content'] = empty($data['content']) ? $artikel[0]->content : $data['content'];
 
 		if(empty($data['gambar_link'])) {
 			$data['gambar_link'] = "https://dummyimage.com/900x400/ced4da/6c757d.jpg";

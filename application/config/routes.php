@@ -65,30 +65,5 @@ $route['setting']['POST'] = 'Setting/post';
 $route['write']['GET'] = 'Write/index';
 $route['write']['POST'] = 'Write/post';
 $route['post/(:num)']['GET'] = 'Post/index/$1';
-
-// website.com/api/user/all , Method: GET, Return: JSON
-$route['api/user/all'] = '_API_User/getall'; 
-// website.com/api/user/id/1 , Method: GET, Return: JSON
-$route['api/user/(:any)/(:any)']['GET'] = '_API_User/getby/$1/$2'; 
-// website.com/api/user/email , Method: POST, POST_DATA: value=any, Return: JSON
-$route['api/user/(:any)']['POST'] = '_API_User/getby/$1';
-
-// website.com/api/login , Method: POST, POST_DATA: email=any&password=any, Return: JSON
-$route['api/login']['POST'] = '_API/login';
-// website.com/api/logout , Method: GET, Return: JSON
-$route['api/logout']['GET'] = '_API/logout';
-// website.com/api/register , Method: POST, POST_DATA: email=any&name=any&password=any, Return: JSON
-$route['api/register']['POST'] = '_API/register';
-
-// website.com/api/article/all , Method: GET, Return: JSON
-$route['api/article/all'] = '_API_Artikel/get_all'; 
-// website.com/api/article/1 , Method: GET, Return: JSON
-$route['api/article/(:num)']['GET'] = '_API_Artikel/get_by_id/$1';
-// website.com/api/article/author/1 , Method: GET, Return: JSON
-$route['api/article/author/(:num)']['GET'] = '_API_Artikel/get_by_author/$1'; 
-// website.com/api/article/1/delete , Method: GET, Return: JSON
-$route['api/article/(:num)/delete']['GET'] = '_API_Artikel/delete/$1';  
-// website.com/api/article/create , Method: POST, Return: JSON
-$route['api/article/create']['POST'] = '_API_Artikel/create';  
-// website.com/api/article/1/update , Method: POST, Return: JSON
-$route['api/article/(:num)/update']['POST'] = '_API_Artikel/update/$1';  
+$route['edit/(:num)']['GET'] = 'Edit/index/$1';
+$route['edit/(:num)']['POST'] = 'Edit/post/$1';

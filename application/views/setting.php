@@ -16,12 +16,12 @@
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container px-5">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #ffffff;">
+				<div class="container align-items-center px-5">
                     <a class="navbar-brand" href="home"><img src="<?php echo base_url(); ?>assets/open-blog-logo.png" style="width : 150px"; alt=""></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+						<ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="write"><img src="<?php echo base_url(); ?>assets/plus.png" style="width:20px"></a></li>
                             <li>
 								<div class="dropdown">

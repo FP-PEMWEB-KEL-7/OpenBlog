@@ -2,7 +2,8 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Generation Time: Dec 14, 2021 at 08:36 PM
+-- Host: vmi351571.contaboserver.net:3306
+-- Generation Time: Dec 29, 2021 at 10:31 PM
 -- Server version: 8.0.27
 -- PHP Version: 7.4.25
 
@@ -14,12 +15,12 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `mediumkw`
 --
-CREATE DATABASE IF NOT EXISTS `mediumkw` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+CREATE DATABASE IF NOT EXISTS `mediumkw` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
 USE `mediumkw`;
 
 -- --------------------------------------------------------
@@ -30,17 +31,11 @@ USE `mediumkw`;
 
 CREATE TABLE `akun` (
   `id` int UNSIGNED NOT NULL,
-  `email` varchar(200) NOT NULL,
-  `name` varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `password` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `akun`
---
-
-INSERT INTO `akun` (`id`, `email`, `name`, `password`) VALUES
-(1, 'tes@tes.com', 'Tes', '$2y$10$ISjq6DrnovOAg0tn9JMldu.eA2zJwj5jifhDGnoa6DzRByK4qf5dK');
+  `email` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(200) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gambar_link` text CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `password` varchar(128) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -50,18 +45,12 @@ INSERT INTO `akun` (`id`, `email`, `name`, `password`) VALUES
 
 CREATE TABLE `artikel` (
   `id` int NOT NULL,
-  `title` varchar(300) NOT NULL,
+  `title` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `author` int UNSIGNED NOT NULL,
   `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `content` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
---
--- Dumping data for table `artikel`
---
-
-INSERT INTO `artikel` (`id`, `title`, `author`, `createdAt`, `content`) VALUES
-(1, 'Tes judul', 1, '2021-12-14 18:05:33', 'Ini tulisan bagus'),
+  `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `gambar_link` text CHARACTER SET utf8 COLLATE utf8_unicode_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Indexes for dumped tables
@@ -89,13 +78,13 @@ ALTER TABLE `artikel`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
 --
 -- Constraints for dumped tables

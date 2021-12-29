@@ -30,7 +30,6 @@ class Write extends CI_Controller {
 		$data['title'] = "Open Blog | Write";
 		$data['akun'] = $this->session->userdata('user');
 
-        $this->form_validation->set_rules('gambar_link', 'Gambar_Link', 'required');
 		$this->form_validation->set_rules('title', 'Title', 'required');
 		$this->form_validation->set_rules('cerita', 'Cerita', 'required');
 
