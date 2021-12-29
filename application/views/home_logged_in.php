@@ -79,7 +79,7 @@
 												</div>
                                             </div>
                                             <div class="small">
-                                                <a href='<?php echo "/".$artikel->id."/delete"; ?>' class="fw-bold">Delete</a>
+                                                <a href='<?php echo "home/".$artikel->id."/delete"; ?>' class="fw-bold">Delete</a>
                                                 <div class="text-muted">
 													<?php 
 														$date = date_create($artikel->createdAt); 
