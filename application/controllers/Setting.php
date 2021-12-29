@@ -11,6 +11,7 @@ class Setting extends CI_Controller {
 			return redirect('/');
 		}
 
+		$data['title'] = "Open Blog | Setting";
 		$data['akun'] = $this->session->unset_userdata('user');
 
 		$this->load->view('setting', $data);
