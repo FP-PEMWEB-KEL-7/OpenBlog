@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="mainDisplay">
-                        <?php
+                    <?php
                             foreach ($artikels as $artikel) {
                         ?>
                             <div class="cardArticle">
@@ -58,7 +58,12 @@
                                     <div class="top">
                                         <img src="<?php echo base_url(); ?>assets/open-blog-logo-mini.png" alt="<?= $artikel->author_name; ?>">
                                         <p class="author"><?= $artikel->author_name; ?></p>
-                                        <p class="time"><?= $artikel->createdAt; ?></p>
+                                        <p class="time">
+                                            <?php 
+												$date = date_create($artikel->createdAt); 
+												echo date_format($date, 'F d, Y');
+											?>
+                                        </p>
                                     </div>
                                     <div class="main">
                                         <p class="title"><?= $artikel->title; ?></p>
@@ -67,26 +72,9 @@
                                         </p>
                                     </div>
                                 </div>
-<<<<<<< HEAD
                                 <div class="right">
                                     <div class="image">
                                         <img src="https://miro.medium.com/fit/c/250/168/0*b6tqs9K4yPmIkM3D" alt="testing" class='image' />
-=======
-                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
-                                    <div class="d-flex align-items-end justify-content-between">
-                                        <div class="d-flex align-items-center">
-                                            <img class="rounded-circle me-3" width="40px" src="<?= $artikel->author_photo ? $artikel->author_photo : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; ?>" alt="<?= $artikel->author_name; ?>" />
-                                            <div class="small">
-                                                <div class="fw-bold"><?= $artikel->author_name; ?></div>
-                                                <div class="text-muted">
-													<?php 
-														$date = date_create($artikel->createdAt); 
-														echo date_format($date, 'F d, Y');
-													?>
-												</div>
-                                            </div>
-                                        </div>
->>>>>>> 3a65809995bdbb52f948ee5547783492188c34a3
                                     </div>
                                 </div>
                             </div>
