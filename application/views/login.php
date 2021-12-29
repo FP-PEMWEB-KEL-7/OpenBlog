@@ -26,7 +26,7 @@
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item"><a class="nav-link" href="about">Tentang kami</a></li>
                             <li class="nav-item"><a class="nav-link" href="login">Masuk</a></li>
-                            <li class="nav-item"><a class="btn btn-primary btn-lg rounded-pill mb-3" href="sign_up.html">Memulai</a></li>
+                            <li class="nav-item"><a class="btn btn-primary btn-lg rounded-pill mb-3" href="signup">Memulai</a></li>
                         </ul>
                     </div>
                 </div>

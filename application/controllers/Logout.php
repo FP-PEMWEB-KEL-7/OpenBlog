@@ -13,6 +13,7 @@ class Logout extends CI_Controller {
 
 		$this->session->set_userdata('logged_in', false);
 		$this->session->unset_userdata('user');
+		$this->session->unset_userdata('password_raw');
 
 		return redirect('/login');
 	}
