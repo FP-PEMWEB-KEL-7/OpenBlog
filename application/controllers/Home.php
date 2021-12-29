@@ -32,7 +32,7 @@ class Home extends CI_Controller {
 		$akun = $this->session->userdata('user');
 
 		$data['artikels'] = $this->Artikel->get_by_author($akun->id);
-		
+
 		for ($i=0; $i < count($data['artikels']); $i++) { 
 			$data['artikels'][$i]->content = substr($data['artikels'][$i]->content, 0, 200);
 			$data['artikels'][$i]->title = substr($data['artikels'][$i]->title, 0, 30);
