@@ -2,40 +2,60 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Artikel extends CI_Model {
-	public function get_by_author($author = null)
+	public function get_by_author($author = null, $sortby = null, $sort = null)
 	{
 		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email');
 		$this->db->join('akun', 'akun.id = artikel.author');
 		$this->db->from('artikel');
+
+		if ($sortby != null && $sort != null) {
+			$this->db->order_by($sortby, $sort);
+		}
+
 		$this->db->where('artikel.author', $author);
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	public function get_by_id($id = null)
+	public function get_by_id($id = null, $sortby = null, $sort = null)
 	{
 		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email');
 		$this->db->join('akun', 'akun.id = artikel.author');
 		$this->db->from('artikel');
+
+		if ($sortby != null && $sort != null) {
+			$this->db->order_by($sortby, $sort);
+		}
+
 		$this->db->where('artikel.id', $id);
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	public function get_all()
+	public function get_all($sortby = null, $sort = null)
 	{
 		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email');
 		$this->db->join('akun', 'akun.id = artikel.author');
 		$this->db->from('artikel');
+
+		if ($sortby != null && $sort != null) {
+			$this->db->order_by($sortby, $sort);
+		}
+
 		$query = $this->db->get();
 		return $query->result();
 	}
 
-	public function get_limit($limit = null)
+	public function get_limit($limit = null, $sortby = null, $sort = null)
 	{
 		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email');
 		$this->db->join('akun', 'akun.id = artikel.author');
 		$this->db->from('artikel');
+
+		if ($sortby != null && $sort != null) {
+			$this->db->order_by($sortby, $sort);
+		}
+
 		$this->db->limit($limit);
 		$query = $this->db->get();
 		return $query->result();
