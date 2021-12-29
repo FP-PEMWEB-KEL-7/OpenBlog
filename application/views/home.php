@@ -18,6 +18,9 @@
                         <img src="<?php echo base_url(); ?>assets/open-blog-logo.png" alt="Logo" class="image" />
                     </a>
                     <div class="right">
+                        <a href="about" class="signInText">
+                            About Us
+                        </a>
                         <a href="login" class="signInText">
                             Sign In
                         </a>
@@ -56,7 +59,7 @@
                             <div class="cardArticle">
                                 <div class="left">
                                     <div class="top">
-                                        <img src="<?php echo base_url(); ?>assets/open-blog-logo-mini.png" alt="<?= $artikel->author_name; ?>">
+                                        <img src="<?= $artikel->author_photo ? $artikel->author_photo : 'https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg'; ?>" alt="<?= $artikel->author_name; ?>">
                                         <p class="author"><?= $artikel->author_name; ?></p>
                                         <p class="time">
                                             <?php 
