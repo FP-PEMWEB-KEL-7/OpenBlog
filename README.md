@@ -19,6 +19,10 @@ Open blog adalah sebuah website artikel blog yang ramah digunakan untuk semua ka
 ![image](https://user-images.githubusercontent.com/95756766/147681350-15870519-685b-40ce-bde1-a7d5daf7fa3d.png)
 
 # PENJELASAN SITEMAP
+-> Pada Home Page, pengguna bisa mengakses/menuju ke Home Page, Login, dan Sign Up.<br>
+-> Selanjutnya, saat berada di home page juga dapat Melihat Semua Artikel, dan Membaca Artikel Pilihan.<br>
+-> Saat pengguna selesai melakukan Login atau Sign Up, akan menuju ke halaman Home Login.<br>
+-> Pada Home Login pengguna dapat mengakses Log Out, Membaca Artikel Pilihan, Membaca Artikel, Update Profil, Update Artikel, dan Melihat Artikel yang Telah Ditulis<br>
 
 # TEKNOLOGI YANG DIGUNAKAN
 ### CI3
