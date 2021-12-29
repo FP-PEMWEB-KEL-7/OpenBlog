@@ -42,7 +42,7 @@
         <!-- form login -->
         <form action="<?= base_url('login'); ?>" method="POST" class="container" style="margin-top : 30px;">
             <div class="row">
-                <div class="col-md-6 offset-md-3 shadow p-3 mb-5 bg-body rounded">
+                <div class="d-flex flex-column flex-nowrap col-md-6 offset-md-3 shadow p-3 mb-5 bg-body rounded">
                     <div class="mb-3 m-2">
                         <label for="password" class="form-label">Email address</label>
                         <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
@@ -51,12 +51,18 @@
                         <label for="password" class="form-label">Password</label>
                         <input type="password" class="form-control" id="password" name="password">
                     </div>
-					<div class="mb-3 m-2">
-						<?= $this->session->flashdata('error'); ?>
-						<?= validation_errors(); ?>
+					<div class="d-flex flex-column flex-nowrap mb-3 m-2">
+						<div>
+							<?= $this->session->flashdata('error'); ?>
+						</div>
+						<div>
+							<?= validation_errors(); ?>
+						</div>
                     </div>
-                    <button type="submit" class="btn btn-primary m-2">Masuk</button>
-                  	<a href="signup" class="ms-auto">Belum punya akun?</a>
+					<div class="d-flex flex-row flex-nowrap mb-3 m-2">
+						<button type="submit" class="btn btn-primary m-2">Masuk</button>
+						<a href="signup" class="ms-auto">Belum punya akun?</a>
+					</div>
                 </div>
             </div>
         </form>
