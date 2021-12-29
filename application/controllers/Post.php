@@ -7,10 +7,6 @@ class Post extends CI_Controller {
 	{
 		$this->load->helper('url');
 
-		if (!$this->session->userdata('logged_in')){
-			return redirect('/');
-		}
-
 		$data['artikel'] = $this->Artikel->get_by_id($id);
 
 		if (empty($data['artikel'])){
