@@ -37,7 +37,7 @@
                         <p className="text">Email address</p>
                         <input type="email" id="email" name="email" class="fill" placeholder="email" />
                         <p className="text">Password</p>
-                        <input type="password" class="fill" placeholder="Password" />
+                        <input type="password"  id="password" name="password" class="fill" placeholder="Password" />
                         <div class="bottom">
                             <button class="button" type="submit">Sign In</button>
                             <a href="signup" class="signUpText">
