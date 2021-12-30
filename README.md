@@ -21,7 +21,6 @@
 
 # Daftar Isi
 
-- [Daftar Isi](#daftar-isi)
 - [Pengantar](#pengantar)
 - [Screenshot Halaman Utama](#screenshot-halaman-utama)
 - [Sitemap](#sitemap)
