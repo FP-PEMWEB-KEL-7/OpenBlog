@@ -57,10 +57,10 @@ Open Blog adalah sebuah website artikel blog yang ramah digunakan untuk semua ka
 
 #### **PENJELASAN**
 
-- Pada Home Page, pengguna bisa mengakses/menuju ke Home Page, Login, dan Sign Up.
+- Pada Home Page, pengguna bisa mengakses/menuju ke Login, dan Sign Up.
   - Selanjutnya, saat berada di home page juga dapat Melihat Semua Artikel, dan Membaca Artikel Pilihan.
-- Saat pengguna selesai melakukan Login atau Sign Up, akan menuju ke halaman Home Login.
-- Pada Home Login pengguna dapat mengakses Log Out, Membaca Artikel Pilihan, Membaca Artikel, Update Profil, Update Artikel, dan Melihat Artikel yang Telah Ditulis.
+- Saat pengguna berhasil melakukan Login atau Sign Up, pengguna akan diarahkan ke halaman Home (logged in).
+- Pada Home (logged in) pengguna dapat mengakses Log Out, Membaca Artikel Pilihan, Membaca Artikel, Update Profil, Update Artikel, Delete Artikel, dan Melihat Artikel yang Telah Ditulis.
 
 ---
 # Teknologi Yang Digunakan
