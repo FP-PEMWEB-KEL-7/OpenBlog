@@ -53,16 +53,16 @@
                         <div class="col-lg-8 col-xl-6">
                             <div class="text-center">
                                 <h2 class="fw-bolder">Find Your Article</h2>
-								<form class="d-flex justify-content-center">
+								<small class="text-muted"><?= validation_errors(); ?></small>
+								<form action="<?= base_url('search'); ?>" method="POST" class="d-flex justify-content-center">
 									<div class="row align-items-center">
 										<div class="col-auto px-0">
-										
-										<input type="text" id="inlineFormInput" placeholder="Jane Doe" class="form-control">
+											<input type="text" id="keyword" name="keyword" placeholder="Masukan keyword" class="form-control">
 										</div>
 										
 										
 										<div class="col-auto px-0">
-										<button type="submit" class="btn btn-primary">Search</button>
+											<button type="submit" class="btn btn-primary">Cari</button>
 										</div>
 									</div>
 								</form>

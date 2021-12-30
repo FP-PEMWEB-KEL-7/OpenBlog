@@ -113,4 +113,35 @@ class Artikel extends CI_Model {
 		$this->db->where('id', $id);
 		return $this->db->update('artikel', $data);
 	}
+
+	public function search($keyword = null, $sortby = null, $sort = null)
+	{
+		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email, artikel.gambar_link as poster, akun.gambar_link as author_photo');
+		$this->db->join('akun', 'akun.id = artikel.author');
+		$this->db->from('artikel');
+
+		if ($sortby != null && $sort != null) {
+			$this->db->order_by($sortby, $sort);
+		}
+
+		$this->db->like('artikel.title', $keyword);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+	public function search_with_id($id = null, $keyword = null, $sortby = null, $sort = null)
+	{
+		$this->db->select('artikel.id as id, artikel.title as title, artikel.content as content, artikel.author as author_id, artikel.createdAt as createdAt, akun.name as author_name, akun.email as author_email, artikel.gambar_link as poster, akun.gambar_link as author_photo');
+		$this->db->join('akun', 'akun.id = artikel.author');
+		$this->db->from('artikel');
+
+		if ($sortby != null && $sort != null) {
+			$this->db->order_by($sortby, $sort);
+		}
+
+		$this->db->like('artikel.title', $keyword);
+		$this->db->where('artikel.id', $id);
+		$query = $this->db->get();
+		return $query->result();
+	}
 }
