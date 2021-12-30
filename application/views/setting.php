@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </nav>
-            <div class="container rounded bg-white mt-10 mb-5">
+            <div class="container rounded bg-white mb-5" stye="margin-top: 4rem !important;">
                 <div class="row">
                     <div class="col-md-3 border-right">
                         <div class="d-flex flex-column align-items-center text-center p-3">
