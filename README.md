@@ -23,15 +23,10 @@
 
 - [Daftar Isi](#daftar-isi)
 - [Pengantar](#pengantar)
-			- [**Deskripsi Aplikasi**](#deskripsi-aplikasi)
-			- [**Disusun Oleh (Kelompok 7)**](#disusun-oleh-kelompok-7)
 - [Screenshot Halaman Utama](#screenshot-halaman-utama)
 - [Sitemap](#sitemap)
-			- [**PENJELASAN**](#penjelasan)
 - [Teknologi Yang Digunakan](#teknologi-yang-digunakan)
 - [Cara Penggunaan](#cara-penggunaan)
-			- [**SEBELUM LOGIN**](#sebelum-login)
-			- [**SETELAH LOGIN**](#setelah-login)
 - [Fitur](#fitur)
 - [Penjelasan Struktur Aplikasi (source code)](#penjelasan-struktur-aplikasi-source-code)
 
