@@ -1,7 +1,7 @@
 <div align="center">
     <img src="assets/open-blog-logo-mini.png" height="70" alt="Open Blog">
     <h1>Open Blog</h1>
-    <strong>Aplikasi blog yang dibuat untuk rumah digunakan penulis.</strong>
+    <strong>Aplikasi blog yang dibuat untuk ramah digunakan penulis.</strong>
 </div>
 <br>
 <div align="center">
@@ -201,12 +201,12 @@ Penjelasan
     <br>Merupakan controller yang menghandle rute `/signup`.
   - **Write.php**
     <br>Merupakan controller yang menghandle rute `/write`.
-- **application/views/**
+- **application/models/**
   - **Akun.php**
     <br>Merupakan model yang membuat aplikasi dapat berinteraksi dengan table akun pada database.
   - **Artikel.php**
   	<br>Merupakan model yang membuat aplikasi dapat berinteraksi dengan table artikel pada database.
-- **application/models/**
+- **application/views/**
   - **about.php**
     <br>Merupakan view yang akan menjadi tampilan halaman about.
   - **delete.php**
