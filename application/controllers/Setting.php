@@ -43,6 +43,7 @@ class Setting extends CI_Controller {
 		$gambar_link = $this->input->post('gambar_link');
 		$password = $this->input->post('password');
 
+		$this->load->model('Akun');
 		$updated = $this->Akun->update($data['akun']->id, [
 			'name' => $name,
 			'password' => $password,

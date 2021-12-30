@@ -124,7 +124,7 @@ class Artikel extends CI_Model {
 			$this->db->order_by($sortby, $sort);
 		}
 
-		$this->db->like('artikel.title', $keyword);
+		$this->db->like('title', $keyword);
 		$query = $this->db->get();
 		return $query->result();
 	}
@@ -139,8 +139,8 @@ class Artikel extends CI_Model {
 			$this->db->order_by($sortby, $sort);
 		}
 
-		$this->db->like('artikel.title', $keyword);
-		$this->db->where('artikel.id', $id);
+		$this->db->like('title', $keyword);
+		$this->db->where('author', $id);
 		$query = $this->db->get();
 		return $query->result();
 	}
