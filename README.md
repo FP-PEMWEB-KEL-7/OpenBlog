@@ -20,16 +20,19 @@
 ---
 
 # Daftar Isi
+- [Daftar Isi](#daftar-isi)
 - [Pengantar](#pengantar)
-  - [Deskripsi Aplikasi](#deskripsi-aplikasi)
-  - [Disusun Oleh](#disusun-oleh-kelompok-7)
+			- [**Deskripsi Aplikasi**](#deskripsi-aplikasi)
+			- [**Disusun Oleh (Kelompok 7)**](#disusun-oleh-kelompok-7)
 - [Screenshot Halaman Utama](#screenshot-halaman-utama)
 - [Sitemap](#sitemap)
-  - [Penjelasan Sitemap](#penjelasan)
+			- [**PENJELASAN**](#penjelasan)
 - [Teknologi Yang Digunakan](#teknologi-yang-digunakan)
 - [Cara Penggunaan](#cara-penggunaan)
+			- [**SEBELUM LOGIN**](#sebelum-login)
+			- [**SETELAH LOGIN**](#setelah-login)
 - [Fitur](#fitur)
-- [Penjelasan Kode](#penjelasakan-struktur-aplikasi-source-code)
+- [Penjelasan Struktur Aplikasi (source code)](#penjelasan-struktur-aplikasi-source-code)
 
 ---
 
@@ -70,6 +73,12 @@ Open Blog adalah sebuah website artikel blog yang ramah digunakan untuk semua ka
 **CodeIgniter 3**
 
 Salah satu Framework PHP kuat dan tahan lama yang sangat populer dengan menggunakan Konsep MVC dan sering digunakan oleh developer dan komunitas di seluruh penjuru dunia. Dengan menggunakan Framework ini pula kita tidak akan terlalu kesulitan mencari tutorial yang membahas framework ini karena Developer Codeigniter 3 sudah menyediakan dokumentasi secara lengkap atau Table of Content yang bisa kalian lihat di User Guide.
+
+**Bootstrap**
+
+Kerangka kerja CSS yang sumber terbuka dan bebas untuk merancang situs web dan aplikasi web. Kerangka kerja ini berisi templat desain berbasis HTML dan CSS untuk tipografi, formulir, tombol, navigasi, dan komponen antarmuka lainnya, serta juga ekstensi opsional JavaScript. 
+
+Tidak seperti kebanyakan kerangka kerja web lainnya, kerangka kerja ini hanya fokus pada pengembangan front-end saja. Dipakai untuk mendesain halaman depan atau tampilan website (front end).
 
 **MySQL**
 
@@ -127,7 +136,7 @@ Sesudah Login
 
 ---
 
-# Penjelasakan Struktur Aplikasi (source code)
+# Penjelasan Struktur Aplikasi (source code)
 Berikut adalah struktur aplikasi yang terpenting
 
 ```bash
@@ -139,6 +148,8 @@ Berikut adalah struktur aplikasi yang terpenting
 │   │   └── routes.php
 │   ├── controllers/
 │   │   ├── About.php
+│   │   ├── Delete.php
+│   │   ├── Edit.php
 │   │   ├── Home.php
 │   │   ├── Login.php
 │   │   ├── Logout.php
@@ -151,59 +162,78 @@ Berikut adalah struktur aplikasi yang terpenting
 │   │   └── Artikel.php
 │   └── views/
 │       ├── about.php
+│       ├── delete.php
 │       ├── home_logged_in.php
 │       ├── home.php
 │       ├── login.php
+│       ├── post_logged_in.php
 │       ├── post.php
 │       ├── setting.php
 │       ├── signup.php
 │       └── write.php
 └── .htaccess
 ```
-## Folder View
-##### home.php
-File ini berisi kode-kode untuk tampilan pada beranda/halaman utama website.
-##### about.php
-File ini berisi kode-kode untuk tampilan detail terkait web ini dan pembuatnya.
-##### login.php
-File ini berisi kode-kode untuk tampilan login.
-##### signup.php
-File ini berisi kode-kode untuk tampilan signup.
-##### write.php
-File ini berisi kode-kode untuk tampilan menulis isi artikel.
-##### post.php
-File ini berisi kode-kode untuk tampilan isi artikel.
-##### settings.php
-File ini berisi kode-kode untuk merubah detail informasi pada user.
-##### home_logged_in.php
-File ini berisi kode-kode untuk tampilan pada beranda/halaman utama website setelah login.
 
-## Folder Config
-Kode-kode yang berada pada folder “config” berfungsi untuk konfigurasi pada website. Beberapa kode-kode inti/file penting yang terdapat pada folder tersebut, yaitu :
+Penjelasan
+- **application/config/**
+  - **autoload.php**
+    <br>Aplikasi ini menggunakan autoload untuk load library saja, yaitu `database`, `session`, dan `form_validation`.
+  - **config.php**
+    <br>Sesuaikan base_url pada config sesuai dengan url pada tempat aplikasi ini dijalankan (misal hosting milik pribadi `example.com/openblog`).
+  - **database.php**
+    <br>Sesuaikan hostname, username, password, dan database dengan database yang akan digunakan.
+  - **routes.php**
+    <br>Berisi semua rute yang didaftarkan oleh aplikasi ini (`/home`, `/login`, `/about`, `/signup`, dsb).
+- **application/controllers/**
+  - **About.php**
+    <br>Merupakan controller yang menghandle rute `/about`.
+  - **Delete.php**
+    <br>Merupakan controller yang menangani rute `/confirm_delete` dan `/proceed_delete`.
+  - **Edit.php**
+    <br>Merupakan controller yang menghandle rute `/edit`.
+  - **Home.php**
+    <br>Merupakan controller yang menghandle rute `/home` dan `/`.
+  - **Login.php**
+    <br>Merupakan controller yang menghandle rute `/login`.
+  - **Logout.php**
+    <br>Merupakan controller yang menghandle rute `/logout`.
+  - **Post.php**
+    <br>Merupakan controller yang menghandle rute `/post`.
+  - **Setting.php**
+    <br>Merupakan controller yang menghandle rute `/setting`.
+  - **Signup.php**
+    <br>Merupakan controller yang menghandle rute `/signup`.
+  - **Write.php**
+    <br>Merupakan controller yang menghandle rute `/write`.
+- **application/views/**
+  - **Akun.php**
+    <br>Merupakan model yang membuat aplikasi dapat berinteraksi dengan table akun pada database.
+  - **Artikel.php**
+  	<br>Merupakan model yang membuat aplikasi dapat berinteraksi dengan table artikel pada database.
+- **application/models/**
+  - **about.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman about.
+  - **delete.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman delete.
+  - **edit.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman edit.
+  - **home_logged_in.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman home untuk kondisi user telah login.
+  - **home.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman home untuk kondisi user belum login.
+  - **login.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman login.
+  - **post_logged_in.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman baca artikel untuk kondisi user telah login.
+  - **post.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman baca artikel untuk kondisi user belum login.
+  - **setting.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman setting.
+  - **signup.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman signup.
+  - **write.php**
+    <br>Merupakan view yang akan menjadi tampilan halaman write.
+- **.htaccess**
+  <br>Untuk mengkonfigurasikan Apache agar aplikasi dapat berjalan.
 
-##### autoload.php
-File konfigurasi yang pertama yaitu autoload.php, file ini digunakan untuk mengatur fungsi-fungsi yang akan dimuat otomatis di awal ketika program dijalankan.<br>
-##### config.php
-Pada file ini terdapat beberapa onfigurasi yang secara standar sudah terkonfigurasi.
-##### database.php
-Dilihat dari nama filenya maka anda sudah dapat menangkap apa fungsi dari file ini. File database.php digunakan untuk melakukan konfigurasi yang berkaitan dengan konfigurasi database dari website yang akan dibuat.
-##### routes.php
-Untuk anda yang belum memahami tentang route akan saya gambarkan tentang penggunaan dari route itu sendiri. Route adalah salah satu cara untuk mengatur jalur atau rute yang digunakan untuk mengakses sebuah halaman website. Route ini juga sering digunakan agar tampilan link dari website yang dibuat lebih simpel dan lebih mudah untuk dipahami. Route juga bisa diartikan sebagai versi alias dari jalur utama menuju alamat asli.
-
-## Folder Controllers
-##### home.php
-File ini berisi kode-kode untuk membuat logic pada beranda/halaman utama website.
-##### about.php
-File ini berisi kode-kode untuk membuat logic detail terkait web ini dan pembuatnya.
-##### login.php
-File ini berisi kode-kode untuk membuat logic login.
-##### signup.php
-File ini berisi kode-kode untuk membuat logic signup.
-##### write.php
-File ini berisi kode-kode untuk membuat logic menulis isi artikel.
-##### post.php
-File ini berisi kode-kode untuk membuat logic isi artikel.
-##### settings.php
-File ini berisi kode-kode untuk merubah detail informasi pada user.
-##### home_logged_in.php
-File ini berisi kode-kode untuk membuat logic pada beranda/halaman utama website setelah login.
+---
